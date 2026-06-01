@@ -37,17 +37,16 @@
 
         <!-- DESCRIPCIÓN -->
         <section id="Descripcion">
-            <pre><h2 style="text-align: center;">Descripcón</h2></pre>
-            <p style="text-align: center">🌿Mercadito Fran Aracena🌿</p> <pre>
-           </pre>
-            <p>Aqui encontrarás productos pensados para tu bienestar, belleza y cuidado personal 💖.</p><p> Con dedicación para ofrecerte artículos de calidad como productos Natura y Leonisa, ideales para sentirte bien por dentro y por fuera.</p>
+            <h2 style="text-align: center;">Descripción</h2>
+            <p style="text-align: center">🌿Mercadito Fran Aracena🌿</p>
+            <p>Aqui encontrarás productos pensados para tu bienestar, belleza y cuidado personal 💖.</p>
+            <p>Con dedicación para ofrecerte artículos de calidad como productos Natura y Leonisa, ideales para sentirte bien por dentro y por fuera.</p>
             <p>Nos caracteriza la cercanía, la confianza y una atención personalizada para cada cliente. Aquí no solo compras, también recibes asesoría y recomendaciones pensadas en ti ✨</p>
-<p>  <br> </p>
-<p>📍 Atención cercana y responsable</p>  
-<p>🛍️ Productos originales y de calidad</p>  
-<p>💬 Contáctanos y descubre lo que tenemos para ti </p> 
-
-¡Te esperamos en Mercadito Fran Aracena! 💕
+            <p><br></p>
+            <p>📍 Atención cercana y responsable</p>
+            <p>🛍️ Productos originales y de calidad</p>
+            <p>💬 Contáctanos y descubre lo que tenemos para ti</p>
+            ¡Te esperamos en Mercadito Fran Aracena! 💕
         </section>
 
     </main>
@@ -73,9 +72,10 @@
     </p>
 </section>
 
+        <!-- PRODUCTOS: el tbody se llena dinámicamente desde app.js -->
         <section id="productos">
     <h2>Productos en venta</h2>
-    <p class="intro-productos">Aquí pronto se mostrarán los productos disponibles.</p>
+    <p class="intro-productos">Productos disponibles en el mercadito.</p>
 
     <table>
         <thead>
@@ -85,93 +85,32 @@
                 <th>Descuento</th>
                 <th>Precio final</th>
                 <th>Total</th>
+                <!-- La columna Acciones se agrega dinámicamente desde app.js -->
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Crema corporal</td>
-                <td>$12.000</td>
-                <td>10%</td>
-                <td>$10.800</td>
-                <td>$10.800</td>
-            </tr>
-
-            <tr>
-                <td>Maquillaje</td>
-                <td>$15.000</td>
-                <td>5%</td>
-                <td>$14.250</td>
-                <td>$14.250</td>
-            </tr>
-
-            <tr>
-                <td>Pegamento</td>
-                <td>$2.000</td>
-                <td>0%</td>
-                <td>$2.000</td>
-                <td>$2.000</td>
-            </tr>
-
-            <tr>
-                <td>Lapicera</td>
-                <td>$1.500</td>
-                <td>0%</td>
-                <td>$1.500</td>
-                <td>$1.500</td>            
-            </tr>
-
-            <tr>
-                <td>Perfume Natura</td>
-                <td>$18.000</td>
-                <td>5%</td>
-                <td>$17.100</td>
-                <td>$17.100</td>
-            </tr>
-
-            <tr>
-                <td><strong>Total general</strong></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            <td><strong>$43.850</strong></td>
-            </tr>
+            <!-- Filas generadas por app.js -->
         </tbody>
     </table>
 </section>
 
+        <!-- CLIENTES: el tbody se llena dinámicamente desde app.js -->
         <section id="deben-pagar">
     <h2>Gente que debe pagar</h2>
     <p>Aquí se junta el total del dinero que deben pagar las personas.</p>
+    <!-- El botón "Agregar cliente" se inyecta aquí desde app.js -->
 
     <table>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Total</th>
+                <!-- La columna Acciones se agrega dinámicamente desde app.js -->
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Cliente 1</td>
-                <td>$15.000</td>
-            </tr>
-            <tr>
-                <td>Cliente 2</td>
-                <td>$9.000</td>
-            </tr>
-            <tr>
-                <td>Cliente 3</td>
-                <td>$17.100</td>
-            </tr>
-            <tr>
-                <td>Cliente 4</td>
-                <td>$14.250</td>
-            </tr>
-            <tr class="total">
-                <td>Total general</td>
-                <td>$55.350</td>
-            </tr>
-</tbody>
+            <!-- Filas generadas por app.js -->
+        </tbody>
     </table>
 </section>
 
@@ -211,8 +150,7 @@
                 <h3>Redes Sociales</h3>
                 <ul>
                     <li><a href="https://www.natura.cl/consultoria/franaracena">Pagina Compra Desde Natura</a></li>
-                    <li><a href="https://www.instagram.com/mercadito_franaracena?utm_source=qr">Grupo de Intagram</a></li>
-                    <!-- puedes agregar más -->
+                    <li><a href="https://www.instagram.com/mercadito_franaracena?utm_source=qr">Grupo de Instagram</a></li>
                 </ul>
             </div>
 
@@ -221,5 +159,8 @@
 
     </footer>
 
+    <!-- JavaScript externo (al final del body, sin inline JS) -->
+    <script src="js/app.js" defer></script>
 </body>
 </html>
+
