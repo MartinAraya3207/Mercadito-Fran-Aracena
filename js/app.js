@@ -712,3 +712,10 @@ function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
+const botonMenu = document.getElementById("btn-menu");
+const menuNav = document.getElementById("menu-nav");
+
+botonMenu.addEventListener("click", () => {
+    menuNav.classList.toggle("activo");
+});
