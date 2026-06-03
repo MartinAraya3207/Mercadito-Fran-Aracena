@@ -425,6 +425,40 @@ function inyectarBotonNuevoProducto() {
   seccion.insertBefore(btn, seccion.querySelector("table"));
 }
 
+function inyectarBuscadorProductos() {
+    const seccion = document.getElementById("productos");
+    if (!seccion) return;
+
+    const input = document.createElement("input");
+    input.id = "buscador-productos";
+    input.type = "text";
+    input.placeholder = "Buscar producto...";
+
+    input.addEventListener("input", filtrarProductos);
+
+    seccion.insertBefore(input, seccion.querySelector("table"));
+}
+
+function filtrarProductos() {
+    const texto = document
+        .getElementById("buscador-productos")
+        .value
+        .toLowerCase();
+
+    const filas = document.querySelectorAll("#productos tbody tr");
+
+    filas.forEach((fila) => {
+        const nombre = fila.querySelector("td");
+
+        if (!nombre) return;
+
+        if (nombre.textContent.toLowerCase().includes(texto)) {
+            fila.style.display = "";
+        } else {
+            fila.style.display = "none";
+        }
+    });
+}
 /**
  * Agrega el botón "Agregar cliente" sobre la tabla de clientes.
  */
@@ -709,6 +743,7 @@ function init() {
   renderizarProductos();
   renderizarClientes();
   restaurarModo();
+  inyectarBuscadorProductos();
 }
 
 document.addEventListener("DOMContentLoaded", init);
