@@ -153,11 +153,27 @@ function abrirModalProducto(evento) {
 }
 
 /**
+ * Sanitiza texto ingresado por el usuario para prevenir XSS.
+ * Convierte caracteres peligrosos en texto seguro.
+ * @param {string} texto - Texto ingresado por el usuario
+ * @returns {string} Texto sanitizado
+ */
+function sanitizarTexto(texto) {
+  return texto
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+/**
  * Guarda los cambios del producto (nuevo o editado) y actualiza el DOM.
  */
 function guardarProducto() {
   const idRaw = document.getElementById("modal-prod-id").value;
-  const nombre = document.getElementById("modal-prod-nombre").value.trim();
+  const nombre = sanitizarTexto(
+  document.getElementById("modal-prod-nombre").value.trim()
+);
   const precio = parseFloat(document.getElementById("modal-prod-precio").value);
   const descuento = parseFloat(document.getElementById("modal-prod-descuento").value);
   const errorEl = document.getElementById("error-prod");
